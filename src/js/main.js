@@ -43,6 +43,25 @@ $(document).ready(function () {
     $(this).parent().prev().html($(this).html());
   });
 
+  $('.comments__item').each(function () {
+    $(this).attr('data-top', $(this).offset().top);
+  });
+
+  $('.comments__block').scroll(function () {
+    // console.log($(this).scrollTop());
+    $('.comments__item').each(function () {
+      if($(this).offset().top < 380){
+        $(this).css('opacity', '0.7');
+      }
+      if($(this).offset().top < 320){
+        $(this).css('opacity', '0.9');
+      }
+      if($(this).offset().top < 250){
+        $(this).css('opacity', '1');
+      }
+    });
+
+  });
   // var bLazy = new Blazy({
   //   src: 'data-blazy' // Default is data-src
   // });

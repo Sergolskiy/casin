@@ -16,14 +16,51 @@ block content
       source(srcset="./img/logo.png" type="image/png")
       img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
-  div.main-wrap
+  div.main-wrap(style="padding: 30px 0;")
     .comment-module
       .cmodule
         .cmodule__inner
           .cmodule__body.custom-row
             .cmodule__side.custom-col
-              .cmodule__side-inner
-                p(style="background-color: red;") qwe
+              .cmodule__side-inner(style="background-image: url('./img/cmodule-sidebar-bg.png');")
+                form.cmodule__side-form
+                  .cmodule__side-title Голосовать за нас
+                  .cmodule__side-corona
+                    .cmodule__side-corona-i.cmodule__side-corona-i--gold
+                      input(type="radio" name="corona" id="cmodule-corona-gold" checked="checked")
+                      label(for="cmodule-corona-gold")
+                        div
+                        span Золото
+                    .cmodule__side-corona-i.cmodule__side-corona-i--silver
+                      input(type="radio" name="corona" id="cmodule-corona-silver")
+                      label(for="cmodule-corona-silver")
+                        div
+                        span Серебро
+                    .cmodule__side-corona-i.cmodule__side-corona-i--bronze
+                      input(type="radio" name="corona" id="cmodule-corona-bronze")
+                      label(for="cmodule-corona-bronze")
+                        div
+                        span Бронза
+                  .cmodule__side-quantity
+                    .cmodule__side-quantity-i
+                      .cmodule__side-quantity-title Золото
+                      .cmodule__side-quantity-ico
+                        img(src="./img/ico/gold.svg" alt="ico")
+                      .cmodule__side-quantity-txt 4.569 голосов
+                    .cmodule__side-quantity-i
+                      .cmodule__side-quantity-title Серебро
+                      .cmodule__side-quantity-ico
+                        img(src="./img/ico/silver.svg" alt="ico")
+                      .cmodule__side-quantity-txt 4.569 голосов
+                    .cmodule__side-quantity-i
+                      .cmodule__side-quantity-title Бронза
+                      .cmodule__side-quantity-ico
+                        img(src="./img/ico/bronze.svg" alt="ico")
+                      .cmodule__side-quantity-txt 4.569 голосов
+                  .cmodule__side-textarea
+                    textarea(placeholder="Комментарий")
+                  .cmodule__side-btn
+                    a(href="/").cmodule__side-btn-i Голосовать
             .cmodule__content.custom-col
               .cmodule__content-inner
                 p(style="background-color: blue;") qwe

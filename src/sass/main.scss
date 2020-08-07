@@ -113,6 +113,10 @@
       max-width: 1140px;
       width: 100%;
       margin-bottom: 30px;
+
+      @include for-992{
+        padding: 0 15px;
+      }
     }
 
     &__body{
@@ -125,6 +129,7 @@
 
       @include for-992{
         max-width: 100%;
+        margin-bottom: 30px;
       }
     }
 
@@ -365,6 +370,11 @@
     &__content{
       max-width: 810px;
       width: 100%;
+
+      @include for-992{
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -390,11 +400,23 @@
       left: 0;
       width: calc(100% - 12px);
       z-index: 1;
+
+      @include for-992{
+        padding: 20px;
+      }
+
+      @include for-550{
+        padding: 14px;
+      }
     }
 
     &__title{
       font-size: 22px;
       font-weight: bold;
+
+      @include for-992{
+        font-size: 18px;
+      }
     }
 
 
@@ -428,6 +450,11 @@
       color: #666666;
       position: relative;
       top: 5px;
+
+      @include for-992{
+        font-size: 12px;
+        width: 140px;
+      }
 
       &:after{
         content: '';
@@ -511,6 +538,14 @@
 
       &:nth-child(n+2){
         opacity: 0.5;
+      }
+
+      @include for-992{
+        opacity: 1!important;
+      }
+
+      @include for-550{
+        flex-direction: column;
       }
 
 
@@ -599,6 +634,10 @@
 
     &__answer{
       display: flex;
+
+      @include for-550{
+        flex-direction: column;
+      }
     }
 
   }

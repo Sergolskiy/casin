@@ -5,16 +5,6 @@ block vars
   - var pageClass = "homepage";
   - var pageActive = "homepage";
 block content
-  //
-    .b-lazy.webp-img(data-webp="./img/motivated-bg.webp"
-      data-webp-mobile="./img/motivated-bg-mobile.webp"
-      data-img="./img/motivated-bg.png"
-      data-img-mobile="./img/motivated-bg-mobile.png")
-
-    picture
-      source(srcset="./img/logo.webp" type="image/webp")
-      source(srcset="./img/logo.png" type="image/png")
-      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
   div.main-wrap(style="padding: 30px 0;")
     .comment-module
@@ -60,7 +50,7 @@ block content
                   .cmodule__side-textarea
                     textarea(placeholder="Комментарий")
                   .cmodule__side-btn
-                    a(href="/").cmodule__side-btn-i Голосовать
+                    a(href="#").cmodule__side-btn-i Голосовать
             .cmodule__content.custom-col
               .cmodule__content-inner
                 .comments

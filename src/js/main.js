@@ -34,6 +34,15 @@
 
 $(document).ready(function () {
 
+  $('.comments__sort-btn').click(function () {
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.comments__sort-item').click(function () {
+    $(this).closest('.comments__sort').toggleClass('active');
+    $(this).parent().prev().html($(this).html());
+  });
+
   // var bLazy = new Blazy({
   //   src: 'data-blazy' // Default is data-src
   // });
